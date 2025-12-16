@@ -1,0 +1,205 @@
+# Neon PostgreSQL Database Configuration for Physical AI Book
+# Optimized for content management and user data
+
+# Connection settings
+connection:
+  # Database URL (will be provided by Neon)
+  database_url: ${NEON_DATABASE_URL}
+  # Connection pooling
+  pool:
+    min_connections: 2
+    max_connections: 20
+    connection_timeout: 30
+    idle_timeout: 600
+    max_lifetime: 1800
+
+# Database schema for textbook application
+schema:
+  tables:
+    # Content management
+    lessons:
+      columns:
+        - id: uuid, primary_key, default: gen_random_uuid()
+        - title: varchar(255), not_null
+        - slug: varchar(255), unique, not_null
+        - content: text
+        - chapter_id: uuid, foreign_key
+        - lesson_number: integer
+        - estimated_reading_time: integer  # in minutes
+        - created_at: timestamp, default: now()
+        - updated_at: timestamp, default: now()
+        - is_published: boolean, default: true
+      indexes:
+        - slug: B-tree
+        - chapter_id: B-tree
+        - created_at: B-tree
+        - is_published: B-tree
+
+    chapters:
+      columns:
+        - id: uuid, primary_key, default: gen_random_uuid()
+        - title: varchar(255), not_null
+        - description: text
+        - chapter_number: integer
+        - total_lessons: integer
+        - estimated_completion_time: integer  # in minutes
+        - created_at: timestamp, default: now()
+        - updated_at: timestamp, default: now()
+        - is_published: boolean, default: true
+      indexes:
+        - chapter_number: B-tree
+        - is_published: B-tree
+
+    # User management and personalization
+    users:
+      columns:
+        - id: uuid, primary_key, default: gen_random_uuid()
+        - email: varchar(255), unique, not_null
+        - name: varchar(255)
+        - preferences: jsonb  # Store personalization settings
+        - language_preference: varchar(10), default: 'en'
+        - created_at: timestamp, default: now()
+        - updated_at: timestamp, default: now()
+        - last_active: timestamp
+      indexes:
+        - email: B-tree
+        - language_preference: B-tree
+
+    # Progress tracking
+    user_progress:
+      columns:
+        - id: uuid, primary_key, default: gen_random_uuid()
+        - user_id: uuid, foreign_key, not_null
+        - lesson_id: uuid, foreign_key, not_null
+        - completion_status: enum('not_started', 'in_progress', 'completed')
+        - completion_percentage: integer
+        - time_spent: integer  # in seconds
+        - last_accessed: timestamp
+        - notes: text
+        - created_at: timestamp, default: now()
+        - updated_at: timestamp, default: now()
+      indexes:
+        - user_id: B-tree
+        - lesson_id: B-tree
+        - completion_status: B-tree
+        - user_id_lesson_id: B-tree (composite)
+
+    # Content relationships for RAG system
+    lesson_embeddings:
+      columns:
+        - id: uuid, primary_key, default: gen_random_uuid()
+        - lesson_id: uuid, foreign_key, not_null
+        - embedding_id: varchar(255), unique  # Qdrant point ID
+        - content_chunk: text, not_null
+        - chunk_order: integer
+        - created_at: timestamp, default: now()
+        - updated_at: timestamp, default: now()
+      indexes:
+        - lesson_id: B-tree
+        - embedding_id: B-tree
+
+    # Translation management
+    translations:
+      columns:
+        - id: uuid, primary_key, default: gen_random_uuid()
+        - content_id: uuid, not_null  # Could be lesson_id or chapter_id
+        - content_type: enum('lesson', 'chapter')
+        - language_code: varchar(10), not_null
+        - translated_content: text
+        - status: enum('pending', 'in_progress', 'completed', 'reviewed')
+        - translator_id: uuid
+        - created_at: timestamp, default: now()
+        - updated_at: timestamp, default: now()
+      indexes:
+        - content_id: B-tree
+        - language_code: B-tree
+        - content_type: B-tree
+        - status: B-tree
+
+  # Row level security for user data
+  rls:
+    enabled_tables:
+      - users
+      - user_progress
+    policies:
+      users: "auth.uid() = id"
+      user_progress: "auth.uid() = user_id"
+
+# Performance optimization settings
+performance:
+  # Enable pg_stat_statements for query monitoring
+  pg_stat_statements:
+    enabled: true
+    track: all
+    track_utility: false
+    max: 10000
+    track_counts: true
+    track_text: true
+
+  # Connection settings
+  connection_settings:
+    # Optimize for web application
+    shared_buffers: "25%"  # 25% of total RAM
+    effective_cache_size: "60%"  # 60% of total RAM
+    maintenance_work_mem: "64MB"
+    checkpoint_completion_target: 0.9
+    wal_buffers: "16MB"
+    default_statistics_target: 100
+    random_page_cost: 1.1  # Optimized for SSD storage
+    effective_io_concurrency: 200
+
+  # Enable auto-explain for slow query analysis
+  auto_explain:
+    enabled: true
+    log_min_duration: "1s"
+    log_analyze: true
+    log_buffers: true
+    log_timing: true
+    log_triggers: true
+    log_wal: false
+
+# Extensions needed for the application
+extensions:
+  - uuid-ossp  # For UUID generation
+  - pg_stat_statements  # For query performance monitoring
+  - pg_trgm  # For text similarity searches
+  - btree_gin  # For efficient indexing
+
+# Security settings
+security:
+  # Enable Row Level Security
+  row_level_security: true
+  # Enable connection encryption
+  force_encryption: true
+  # Audit logging
+  log_connections: true
+  log_disconnections: true
+  log_statement: "none"  # Don't log all statements for privacy
+  log_min_duration_statement: 1000  # Log slow queries (>1s)
+
+# Backup and maintenance
+backup:
+  # Neon handles backups automatically, but configure retention
+  retention_period: "7 days"
+  # Enable continuous protection
+  continuous_backup: true
+
+# Environment-specific configurations
+environments:
+  development:
+    database_url: ${DEV_DATABASE_URL}
+    pool:
+      min_connections: 1
+      max_connections: 5
+  staging:
+    database_url: ${STAGING_DATABASE_URL}
+    pool:
+      min_connections: 2
+      max_connections: 10
+  production:
+    database_url: ${NEON_DATABASE_URL}
+    pool:
+      min_connections: 2
+      max_connections: 20
+    # Additional production settings
+    log_min_duration_statement: 500  # Log queries >500ms in production

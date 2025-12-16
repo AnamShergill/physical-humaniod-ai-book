@@ -1,0 +1,25 @@
+.lessonObjectives {
+  margin: 1rem 0;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-left: 4px solid #1a73e8;
+  border-radius: 0 4px 4px 0;
+}
+
+.lessonObjectives h3 {
+  margin-top: 0;
+  color: #1a73e8;
+}
+
+.lessonControls {
+  margin: 1rem 0;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .lessonControls {
+    flex-direction: column;
+  }
+}

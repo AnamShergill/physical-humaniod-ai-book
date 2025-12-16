@@ -1,0 +1,62 @@
+{
+  "builds": [
+    {
+      "name": "backend",
+      "src": "./api",
+      "method": "dockerfile",
+      "dockerfile": "Dockerfile"
+    }
+  ],
+  "services": [
+    {
+      "name": "api",
+      "env": "production",
+      "region": "us-west-1",
+      "maxBuilds": 3,
+      "plan": "free",
+      "buildCommand": "npm install && npm run build",
+      "startCommand": "npm start",
+      "healthcheck": "/health",
+      "ports": [
+        {
+          "port": 8080,
+          "protocol": "http",
+          "name": "http",
+          "description": "Main API port"
+        }
+      ],
+      "envVars": [
+        {
+          "name": "NODE_ENV",
+          "value": "production",
+          "required": true,
+          "tracked": true
+        },
+        {
+          "name": "PORT",
+          "value": "8080",
+          "required": true,
+          "tracked": true
+        },
+        {
+          "name": "DATABASE_URL",
+          "value": "",
+          "required": true,
+          "tracked": true
+        },
+        {
+          "name": "QDRANT_URL",
+          "value": "",
+          "required": true,
+          "tracked": true
+        },
+        {
+          "name": "NEON_DATABASE_URL",
+          "value": "",
+          "required": true,
+          "tracked": true
+        }
+      ]
+    }
+  ]
+}
