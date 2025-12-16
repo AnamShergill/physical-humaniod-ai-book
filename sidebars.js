@@ -25,7 +25,8 @@ module.exports = {
           items: [
             'chapters/foundations-of-physical-ai/lesson-1.1',
             'chapters/foundations-of-physical-ai/lesson-1.2',
-            'chapters/foundations-of-physical-ai/lesson-1.3'
+            'chapters/foundations-of-physical-ai/lesson-1.3',
+            'chapters/foundations-of-physical-ai/lesson-1.4'
           ],
         },
         {

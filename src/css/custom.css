@@ -3,6 +3,10 @@
  * Optimized for fast loading, mobile-friendliness, and readability
  */
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* Core performance optimizations */
 :root {
   --ifm-transition-speed-fast: 0.1s;
