@@ -6,13 +6,13 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 (module.exports = {
   title: 'Physical AI & Humanoid Robotics Textbook',
   tagline: 'An AI-native textbook covering Physical AI & Humanoid Robotics',
-  url: 'https://physical-ai-book.com',
+  url: process.env.URL || 'https://your-vercel-domain.vercel.app', // Vercel will set this automatically during deployment
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'physical-ai-book', // Usually your GitHub org/user name.
-  projectName: 'physical-ai-book', // Usually your repo name.
+  organizationName: 'AnamShergill', // Usually your GitHub org/user name.
+  projectName: 'physical-humaniod-ai-book', // Usually your repo name.
 
   presets: [
     [
@@ -63,7 +63,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/physical-ai-book/physical-ai-book',
+            href: 'https://github.com/AnamShergill/physical-humaniod-ai-book',
             label: 'GitHub',
             position: 'right',
           },
@@ -111,7 +111,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/physical-ai-book/physical-ai-book',
+                href: 'https://github.com/AnamShergill/physical-humaniod-ai-book',
               },
             ],
           },

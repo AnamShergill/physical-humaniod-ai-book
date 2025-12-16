@@ -1,10 +1,6 @@
 {
   "version": 2,
   "framework": "docusaurus",
-  "settings": {
-    "nodeVersion": "18.x",
-    "trailingSlash": "preserve"
-  },
   "builds": [
     {
       "src": "package.json",
