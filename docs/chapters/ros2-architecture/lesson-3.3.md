@@ -4,6 +4,26 @@ description: Best practices for designing and implementing ROS 2 systems
 sidebar_label: Lesson 3.3 - ROS 2 Architecture Best Practices
 ---
 
+import LessonHeader from '@site/src/components/LessonHeader';
+import CalloutBlock from '@site/src/components/CalloutBlock';
+import QuizBlock from '@site/src/components/QuizBlock';
+import AIChatPanel from '@site/src/components/AIChatPanel';
+import Breadcrumb from '@site/src/components/Breadcrumb';
+
+<Breadcrumb items={[
+  { label: 'Chapters', href: '/docs/chapters/ros2-architecture' },
+  { label: 'ROS 2 Architecture', href: '/docs/chapters/ros2-architecture' },
+  { label: 'ROS 2 Architecture Best Practices' }
+]} />
+
+<LessonHeader
+  title="ROS 2 Architecture Best Practices"
+  subtitle="Best practices for designing and implementing ROS 2 systems"
+  chapter="3"
+  lessonNumber="3.3"
+  progress={75}
+/>
+
 # ROS 2 Architecture Best Practices
 
 ## Learning Objectives

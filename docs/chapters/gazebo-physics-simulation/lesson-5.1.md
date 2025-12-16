@@ -4,6 +4,26 @@ description: Understanding how to set up and configure Gazebo for robot simulati
 sidebar_label: Lesson 5.1 - Setting up Gazebo
 ---
 
+import LessonHeader from '@site/src/components/LessonHeader';
+import CalloutBlock from '@site/src/components/CalloutBlock';
+import QuizBlock from '@site/src/components/QuizBlock';
+import AIChatPanel from '@site/src/components/AIChatPanel';
+import Breadcrumb from '@site/src/components/Breadcrumb';
+
+<Breadcrumb items={[
+  { label: 'Chapters', href: '/docs/chapters/gazebo-physics-simulation' },
+  { label: 'Gazebo Physics Simulation', href: '/docs/chapters/gazebo-physics-simulation' },
+  { label: 'Setting up Gazebo' }
+]} />
+
+<LessonHeader
+  title="Setting up Gazebo"
+  subtitle="Understanding how to set up and configure Gazebo for robot simulation"
+  chapter="5"
+  lessonNumber="5.1"
+  progress={25}
+/>
+
 # Setting up Gazebo
 
 ## Learning Objectives

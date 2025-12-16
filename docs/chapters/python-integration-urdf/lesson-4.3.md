@@ -4,6 +4,26 @@ description: Advanced URDF concepts including transmissions, sensors, and integr
 sidebar_label: Lesson 4.3 - Advanced URDF Concepts and Integration
 ---
 
+import LessonHeader from '@site/src/components/LessonHeader';
+import CalloutBlock from '@site/src/components/CalloutBlock';
+import QuizBlock from '@site/src/components/QuizBlock';
+import AIChatPanel from '@site/src/components/AIChatPanel';
+import Breadcrumb from '@site/src/components/Breadcrumb';
+
+<Breadcrumb items={[
+  { label: 'Chapters', href: '/docs/chapters/python-integration-urdf' },
+  { label: 'Python Integration & URDF', href: '/docs/chapters/python-integration-urdf' },
+  { label: 'Advanced URDF Concepts and Integration' }
+]} />
+
+<LessonHeader
+  title="Advanced URDF Concepts and Integration"
+  subtitle="Advanced URDF concepts including transmissions, sensors, and integration with ROS 2 systems"
+  chapter="4"
+  lessonNumber="4.3"
+  progress={75}
+/>
+
 # Advanced URDF Concepts and Integration
 
 ## Learning Objectives

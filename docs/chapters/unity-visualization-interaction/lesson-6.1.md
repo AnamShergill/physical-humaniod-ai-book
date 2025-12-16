@@ -4,6 +4,26 @@ description: Understanding Unity integration for robot visualization and human-r
 sidebar_label: Lesson 6.1 - Unity Visualization & Interaction
 ---
 
+import LessonHeader from '@site/src/components/LessonHeader';
+import CalloutBlock from '@site/src/components/CalloutBlock';
+import QuizBlock from '@site/src/components/QuizBlock';
+import AIChatPanel from '@site/src/components/AIChatPanel';
+import Breadcrumb from '@site/src/components/Breadcrumb';
+
+<Breadcrumb items={[
+  { label: 'Chapters', href: '/docs/chapters/unity-visualization-interaction' },
+  { label: 'Unity Visualization & Interaction', href: '/docs/chapters/unity-visualization-interaction' },
+  { label: 'Unity Visualization & Interaction' }
+]} />
+
+<LessonHeader
+  title="Unity Visualization & Interaction"
+  subtitle="Understanding Unity integration for robot visualization and human-robot interaction"
+  chapter="6"
+  lessonNumber="6.1"
+  progress={25}
+/>
+
 # Unity Visualization & Interaction
 
 ## Learning Objectives

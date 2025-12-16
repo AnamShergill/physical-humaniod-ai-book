@@ -1,8 +1,30 @@
 ---
-sidebar_label: 'Lesson 6.3: Unity Physics and Animation for Robotics'
+title: Unity Physics and Animation for Robotics
+description: Understanding Unity's physics engine and animation systems for realistic robot simulation
+sidebar_label: Lesson 6.3 - Unity Physics and Animation for Robotics
 ---
 
-# Lesson 6.3: Unity Physics and Animation for Robotics
+import LessonHeader from '@site/src/components/LessonHeader';
+import CalloutBlock from '@site/src/components/CalloutBlock';
+import QuizBlock from '@site/src/components/QuizBlock';
+import AIChatPanel from '@site/src/components/AIChatPanel';
+import Breadcrumb from '@site/src/components/Breadcrumb';
+
+<Breadcrumb items={[
+  { label: 'Chapters', href: '/docs/chapters/unity-visualization-interaction' },
+  { label: 'Unity Visualization & Interaction', href: '/docs/chapters/unity-visualization-interaction' },
+  { label: 'Unity Physics and Animation for Robotics' }
+]} />
+
+<LessonHeader
+  title="Unity Physics and Animation for Robotics"
+  subtitle="Understanding Unity's physics engine and animation systems for realistic robot simulation"
+  chapter="6"
+  lessonNumber="6.3"
+  progress={75}
+/>
+
+# Unity Physics and Animation for Robotics
 
 ## Overview
 

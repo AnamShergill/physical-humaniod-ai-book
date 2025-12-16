@@ -1,8 +1,30 @@
 ---
-sidebar_label: 'Lesson 8.2: ROS Navigation Stack Deep Dive'
+title: ROS Navigation Stack Deep Dive
+description: Comprehensive exploration of the ROS navigation stack architecture and configuration
+sidebar_label: Lesson 8.2 - ROS Navigation Stack Deep Dive
 ---
 
-# Lesson 8.2: ROS Navigation Stack Deep Dive
+import LessonHeader from '@site/src/components/LessonHeader';
+import CalloutBlock from '@site/src/components/CalloutBlock';
+import QuizBlock from '@site/src/components/QuizBlock';
+import AIChatPanel from '@site/src/components/AIChatPanel';
+import Breadcrumb from '@site/src/components/Breadcrumb';
+
+<Breadcrumb items={[
+  { label: 'Chapters', href: '/docs/chapters/isaac-ros-navigation' },
+  { label: 'Isaac ROS Navigation', href: '/docs/chapters/isaac-ros-navigation' },
+  { label: 'ROS Navigation Stack Deep Dive' }
+]} />
+
+<LessonHeader
+  title="ROS Navigation Stack Deep Dive"
+  subtitle="Comprehensive exploration of the ROS navigation stack architecture and configuration"
+  chapter="8"
+  lessonNumber="8.2"
+  progress={50}
+/>
+
+# ROS Navigation Stack Deep Dive
 
 ## Overview
 

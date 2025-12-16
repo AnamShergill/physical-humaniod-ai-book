@@ -4,6 +4,26 @@ description: Understanding Unified Robot Description Format (URDF) for humanoid 
 sidebar_label: Lesson 4.2 - Creating and Using URDF for Humanoids
 ---
 
+import LessonHeader from '@site/src/components/LessonHeader';
+import CalloutBlock from '@site/src/components/CalloutBlock';
+import QuizBlock from '@site/src/components/QuizBlock';
+import AIChatPanel from '@site/src/components/AIChatPanel';
+import Breadcrumb from '@site/src/components/Breadcrumb';
+
+<Breadcrumb items={[
+  { label: 'Chapters', href: '/docs/chapters/python-integration-urdf' },
+  { label: 'Python Integration & URDF', href: '/docs/chapters/python-integration-urdf' },
+  { label: 'Creating and Using URDF for Humanoids' }
+]} />
+
+<LessonHeader
+  title="Creating and Using URDF for Humanoids"
+  subtitle="Understanding Unified Robot Description Format (URDF) for humanoid robot modeling"
+  chapter="4"
+  lessonNumber="4.2"
+  progress={50}
+/>
+
 # Creating and Using URDF for Humanoids
 
 ## Learning Objectives

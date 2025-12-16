@@ -4,6 +4,26 @@ description: "Understanding the mechanical and structural design of humanoid rob
 sidebar_label: "Lesson 2.2 - Humanoid Robot Anatomy and Design"
 ---
 
+import LessonHeader from '@site/src/components/LessonHeader';
+import CalloutBlock from '@site/src/components/CalloutBlock';
+import QuizBlock from '@site/src/components/QuizBlock';
+import AIChatPanel from '@site/src/components/AIChatPanel';
+import Breadcrumb from '@site/src/components/Breadcrumb';
+
+<Breadcrumb items={[
+  { label: 'Chapters', href: '/docs/chapters/overview-of-humanoid-robotics' },
+  { label: 'Overview of Humanoid Robotics', href: '/docs/chapters/overview-of-humanoid-robotics' },
+  { label: 'Humanoid Robot Anatomy and Design' }
+]} />
+
+<LessonHeader
+  title="Humanoid Robot Anatomy and Design"
+  subtitle="Understanding the mechanical and structural design of humanoid robots"
+  chapter="2"
+  lessonNumber="2.2"
+  progress={50}
+/>
+
 # Humanoid Robot Anatomy and Design
 
 ## Learning Objectives

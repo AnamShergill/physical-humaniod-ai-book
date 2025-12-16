@@ -4,6 +4,26 @@ description: "Understanding the core principles of Physical AI and its applicati
 sidebar_label: "Lesson 1.2 - Physical AI Fundamentals"
 ---
 
+import LessonHeader from '@site/src/components/LessonHeader';
+import CalloutBlock from '@site/src/components/CalloutBlock';
+import QuizBlock from '@site/src/components/QuizBlock';
+import AIChatPanel from '@site/src/components/AIChatPanel';
+import Breadcrumb from '@site/src/components/Breadcrumb';
+
+<Breadcrumb items={[
+  { label: 'Chapters', href: '/docs/chapters/foundations-of-physical-ai' },
+  { label: 'Foundations of Physical AI', href: '/docs/chapters/foundations-of-physical-ai' },
+  { label: 'Physical AI Fundamentals' }
+]} />
+
+<LessonHeader
+  title="Physical AI Fundamentals"
+  subtitle="Understanding the core principles of Physical AI and its applications"
+  chapter="1"
+  lessonNumber="1.2"
+  progress={50}
+/>
+
 # Physical AI Fundamentals
 
 ## Learning Objectives

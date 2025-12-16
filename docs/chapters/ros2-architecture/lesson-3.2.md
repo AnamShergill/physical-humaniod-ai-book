@@ -4,6 +4,26 @@ description: Understanding how to configure and launch ROS 2 systems
 sidebar_label: Lesson 3.2 - Launch Files and Parameters
 ---
 
+import LessonHeader from '@site/src/components/LessonHeader';
+import CalloutBlock from '@site/src/components/CalloutBlock';
+import QuizBlock from '@site/src/components/QuizBlock';
+import AIChatPanel from '@site/src/components/AIChatPanel';
+import Breadcrumb from '@site/src/components/Breadcrumb';
+
+<Breadcrumb items={[
+  { label: 'Chapters', href: '/docs/chapters/ros2-architecture' },
+  { label: 'ROS 2 Architecture', href: '/docs/chapters/ros2-architecture' },
+  { label: 'Launch Files and Parameters' }
+]} />
+
+<LessonHeader
+  title="Launch Files and Parameters"
+  subtitle="Understanding how to configure and launch ROS 2 systems"
+  chapter="3"
+  lessonNumber="3.2"
+  progress={50}
+/>
+
 # Launch Files and Parameters
 
 ## Learning Objectives

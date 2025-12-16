@@ -1,8 +1,30 @@
 ---
-sidebar_label: 'Lesson 8.1: Introduction to Navigation in Robotics'
+title: Introduction to Navigation in Robotics
+description: Understanding fundamental concepts of robot navigation and the ROS navigation stack
+sidebar_label: Lesson 8.1 - Introduction to Navigation in Robotics
 ---
 
-# Lesson 8.1: Introduction to Navigation in Robotics
+import LessonHeader from '@site/src/components/LessonHeader';
+import CalloutBlock from '@site/src/components/CalloutBlock';
+import QuizBlock from '@site/src/components/QuizBlock';
+import AIChatPanel from '@site/src/components/AIChatPanel';
+import Breadcrumb from '@site/src/components/Breadcrumb';
+
+<Breadcrumb items={[
+  { label: 'Chapters', href: '/docs/chapters/isaac-ros-navigation' },
+  { label: 'Isaac ROS Navigation', href: '/docs/chapters/isaac-ros-navigation' },
+  { label: 'Introduction to Navigation in Robotics' }
+]} />
+
+<LessonHeader
+  title="Introduction to Navigation in Robotics"
+  subtitle="Understanding fundamental concepts of robot navigation and the ROS navigation stack"
+  chapter="8"
+  lessonNumber="8.1"
+  progress={25}
+/>
+
+# Introduction to Navigation in Robotics
 
 ## Overview
 

@@ -4,6 +4,26 @@ description: Understanding Python integration with ROS 2 using the rclpy client 
 sidebar_label: Lesson 4.1 - rclpy Python Client Library
 ---
 
+import LessonHeader from '@site/src/components/LessonHeader';
+import CalloutBlock from '@site/src/components/CalloutBlock';
+import QuizBlock from '@site/src/components/QuizBlock';
+import AIChatPanel from '@site/src/components/AIChatPanel';
+import Breadcrumb from '@site/src/components/Breadcrumb';
+
+<Breadcrumb items={[
+  { label: 'Chapters', href: '/docs/chapters/python-integration-urdf' },
+  { label: 'Python Integration & URDF', href: '/docs/chapters/python-integration-urdf' },
+  { label: 'rclpy Python Client Library' }
+]} />
+
+<LessonHeader
+  title="rclpy Python Client Library"
+  subtitle="Understanding Python integration with ROS 2 using the rclpy client library"
+  chapter="4"
+  lessonNumber="4.1"
+  progress={25}
+/>
+
 # rclpy Python Client Library
 
 ## Learning Objectives

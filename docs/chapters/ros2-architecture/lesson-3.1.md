@@ -4,6 +4,26 @@ description: Understanding the fundamental building blocks of ROS 2 architecture
 sidebar_label: Lesson 3.1 - Nodes, Topics, Services, Actions
 ---
 
+import LessonHeader from '@site/src/components/LessonHeader';
+import CalloutBlock from '@site/src/components/CalloutBlock';
+import QuizBlock from '@site/src/components/QuizBlock';
+import AIChatPanel from '@site/src/components/AIChatPanel';
+import Breadcrumb from '@site/src/components/Breadcrumb';
+
+<Breadcrumb items={[
+  { label: 'Chapters', href: '/docs/chapters/ros2-architecture' },
+  { label: 'ROS 2 Architecture', href: '/docs/chapters/ros2-architecture' },
+  { label: 'Nodes, Topics, Services, Actions' }
+]} />
+
+<LessonHeader
+  title="Nodes, Topics, Services, Actions"
+  subtitle="Understanding the fundamental building blocks of ROS 2 architecture"
+  chapter="3"
+  lessonNumber="3.1"
+  progress={25}
+/>
+
 # Nodes, Topics, Services, Actions
 
 ## Learning Objectives

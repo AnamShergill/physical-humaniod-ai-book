@@ -4,6 +4,26 @@ description: "Understanding how to simulate various sensors in Gazebo for humano
 sidebar_label: "Lesson 5.3 - Sensor Simulation: LiDAR, IMU, Depth Cameras"
 ---
 
+import LessonHeader from '@site/src/components/LessonHeader';
+import CalloutBlock from '@site/src/components/CalloutBlock';
+import QuizBlock from '@site/src/components/QuizBlock';
+import AIChatPanel from '@site/src/components/AIChatPanel';
+import Breadcrumb from '@site/src/components/Breadcrumb';
+
+<Breadcrumb items={[
+  { label: 'Chapters', href: '/docs/chapters/gazebo-physics-simulation' },
+  { label: 'Gazebo Physics Simulation', href: '/docs/chapters/gazebo-physics-simulation' },
+  { label: 'Sensor Simulation: LiDAR, IMU, Depth Cameras' }
+]} />
+
+<LessonHeader
+  title="Sensor Simulation: LiDAR, IMU, Depth Cameras"
+  subtitle="Understanding how to simulate various sensors in Gazebo for humanoid robots"
+  chapter="5"
+  lessonNumber="5.3"
+  progress={75}
+/>
+
 # Sensor Simulation: LiDAR, IMU, Depth Cameras
 
 ## Learning Objectives

@@ -4,6 +4,26 @@ description: "Understanding the fundamentals and applications of humanoid robots
 sidebar_label: "Lesson 2.1 - Introduction to Humanoid Robotics"
 ---
 
+import LessonHeader from '@site/src/components/LessonHeader';
+import CalloutBlock from '@site/src/components/CalloutBlock';
+import QuizBlock from '@site/src/components/QuizBlock';
+import AIChatPanel from '@site/src/components/AIChatPanel';
+import Breadcrumb from '@site/src/components/Breadcrumb';
+
+<Breadcrumb items={[
+  { label: 'Chapters', href: '/docs/chapters/overview-of-humanoid-robotics' },
+  { label: 'Overview of Humanoid Robotics', href: '/docs/chapters/overview-of-humanoid-robotics' },
+  { label: 'Introduction to Humanoid Robotics' }
+]} />
+
+<LessonHeader
+  title="Introduction to Humanoid Robotics"
+  subtitle="Understanding the fundamentals and applications of humanoid robots"
+  chapter="2"
+  lessonNumber="2.1"
+  progress={25}
+/>
+
 # Introduction to Humanoid Robotics
 
 ## Learning Objectives

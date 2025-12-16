@@ -4,6 +4,26 @@ description: Understanding advanced rendering techniques and lighting for photor
 sidebar_label: Lesson 6.2 - High-Fidelity Rendering & Lighting
 ---
 
+import LessonHeader from '@site/src/components/LessonHeader';
+import CalloutBlock from '@site/src/components/CalloutBlock';
+import QuizBlock from '@site/src/components/QuizBlock';
+import AIChatPanel from '@site/src/components/AIChatPanel';
+import Breadcrumb from '@site/src/components/Breadcrumb';
+
+<Breadcrumb items={[
+  { label: 'Chapters', href: '/docs/chapters/unity-visualization-interaction' },
+  { label: 'Unity Visualization & Interaction', href: '/docs/chapters/unity-visualization-interaction' },
+  { label: 'High-Fidelity Rendering & Lighting' }
+]} />
+
+<LessonHeader
+  title="High-Fidelity Rendering & Lighting"
+  subtitle="Understanding advanced rendering techniques and lighting for photorealistic robot visualization"
+  chapter="6"
+  lessonNumber="6.2"
+  progress={50}
+/>
+
 # High-Fidelity Rendering & Lighting
 
 ## Learning Objectives

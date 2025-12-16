@@ -4,6 +4,26 @@ description: Introduction to the concept of Physical AI and its applications in 
 sidebar_label: Lesson 1.1 - What is Physical AI?
 ---
 
+import LessonHeader from '@site/src/components/LessonHeader';
+import CalloutBlock from '@site/src/components/CalloutBlock';
+import QuizBlock from '@site/src/components/QuizBlock';
+import AIChatPanel from '@site/src/components/AIChatPanel';
+import Breadcrumb from '@site/src/components/Breadcrumb';
+
+<Breadcrumb items={[
+  { label: 'Chapters', href: '/docs/chapters/foundations-of-physical-ai' },
+  { label: 'Foundations of Physical AI', href: '/docs/chapters/foundations-of-physical-ai' },
+  { label: 'What is Physical AI?' }
+]} />
+
+<LessonHeader
+  title="What is Physical AI?"
+  subtitle="Introduction to the concept of Physical AI and its applications in robotics"
+  chapter="1"
+  lessonNumber="1.1"
+  progress={25}
+/>
+
 # What is Physical AI?
 
 ## Learning Objectives

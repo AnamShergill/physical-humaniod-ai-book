@@ -4,6 +4,26 @@ description: "Mathematical tools and concepts essential for Physical AI implemen
 sidebar_label: "Lesson 1.3 - Mathematical Foundations for Physical AI"
 ---
 
+import LessonHeader from '@site/src/components/LessonHeader';
+import CalloutBlock from '@site/src/components/CalloutBlock';
+import QuizBlock from '@site/src/components/QuizBlock';
+import AIChatPanel from '@site/src/components/AIChatPanel';
+import Breadcrumb from '@site/src/components/Breadcrumb';
+
+<Breadcrumb items={[
+  { label: 'Chapters', href: '/docs/chapters/foundations-of-physical-ai' },
+  { label: 'Foundations of Physical AI', href: '/docs/chapters/foundations-of-physical-ai' },
+  { label: 'Mathematical Foundations for Physical AI' }
+]} />
+
+<LessonHeader
+  title="Mathematical Foundations for Physical AI"
+  subtitle="Mathematical tools and concepts essential for Physical AI implementation"
+  chapter="1"
+  lessonNumber="1.3"
+  progress={75}
+/>
+
 # Mathematical Foundations for Physical AI
 
 ## Learning Objectives

@@ -1,8 +1,30 @@
 ---
-sidebar_label: 'Lesson 8.3: Navigation Implementation in Isaac Sim'
+title: Navigation Implementation in Isaac Sim
+description: Implementing navigation systems within Isaac Sim environments with ROS integration
+sidebar_label: Lesson 8.3 - Navigation Implementation in Isaac Sim
 ---
 
-# Lesson 8.3: Navigation Implementation in Isaac Sim
+import LessonHeader from '@site/src/components/LessonHeader';
+import CalloutBlock from '@site/src/components/CalloutBlock';
+import QuizBlock from '@site/src/components/QuizBlock';
+import AIChatPanel from '@site/src/components/AIChatPanel';
+import Breadcrumb from '@site/src/components/Breadcrumb';
+
+<Breadcrumb items={[
+  { label: 'Chapters', href: '/docs/chapters/isaac-ros-navigation' },
+  { label: 'Isaac ROS Navigation', href: '/docs/chapters/isaac-ros-navigation' },
+  { label: 'Navigation Implementation in Isaac Sim' }
+]} />
+
+<LessonHeader
+  title="Navigation Implementation in Isaac Sim"
+  subtitle="Implementing navigation systems within Isaac Sim environments with ROS integration"
+  chapter="8"
+  lessonNumber="8.3"
+  progress={75}
+/>
+
+# Navigation Implementation in Isaac Sim
 
 ## Overview
 

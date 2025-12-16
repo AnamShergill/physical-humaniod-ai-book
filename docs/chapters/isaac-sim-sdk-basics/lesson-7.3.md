@@ -1,8 +1,30 @@
 ---
-sidebar_label: 'Lesson 7.3: Advanced Isaac Sim Features'
+title: Advanced Isaac Sim Features
+description: Exploring advanced Isaac Sim capabilities for AI-powered robotics
+sidebar_label: Lesson 7.3 - Advanced Isaac Sim Features
 ---
 
-# Lesson 7.3: Advanced Isaac Sim Features
+import LessonHeader from '@site/src/components/LessonHeader';
+import CalloutBlock from '@site/src/components/CalloutBlock';
+import QuizBlock from '@site/src/components/QuizBlock';
+import AIChatPanel from '@site/src/components/AIChatPanel';
+import Breadcrumb from '@site/src/components/Breadcrumb';
+
+<Breadcrumb items={[
+  { label: 'Chapters', href: '/docs/chapters/isaac-sim-sdk-basics' },
+  { label: 'Isaac Sim SDK Basics', href: '/docs/chapters/isaac-sim-sdk-basics' },
+  { label: 'Advanced Isaac Sim Features' }
+]} />
+
+<LessonHeader
+  title="Advanced Isaac Sim Features"
+  subtitle="Exploring advanced Isaac Sim capabilities for AI-powered robotics"
+  chapter="7"
+  lessonNumber="7.3"
+  progress={75}
+/>
+
+# Advanced Isaac Sim Features
 
 ## Overview
 

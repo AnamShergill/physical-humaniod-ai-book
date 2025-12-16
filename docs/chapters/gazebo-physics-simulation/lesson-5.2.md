@@ -4,6 +4,26 @@ description: Understanding physics simulation, gravity effects, and collision ha
 sidebar_label: Lesson 5.2 - Physics, Gravity, and Collisions
 ---
 
+import LessonHeader from '@site/src/components/LessonHeader';
+import CalloutBlock from '@site/src/components/CalloutBlock';
+import QuizBlock from '@site/src/components/QuizBlock';
+import AIChatPanel from '@site/src/components/AIChatPanel';
+import Breadcrumb from '@site/src/components/Breadcrumb';
+
+<Breadcrumb items={[
+  { label: 'Chapters', href: '/docs/chapters/gazebo-physics-simulation' },
+  { label: 'Gazebo Physics Simulation', href: '/docs/chapters/gazebo-physics-simulation' },
+  { label: 'Physics, Gravity, and Collisions' }
+]} />
+
+<LessonHeader
+  title="Physics, Gravity, and Collisions"
+  subtitle="Understanding physics simulation, gravity effects, and collision handling in Gazebo"
+  chapter="5"
+  lessonNumber="5.2"
+  progress={50}
+/>
+
 # Physics, Gravity, and Collisions
 
 ## Learning Objectives

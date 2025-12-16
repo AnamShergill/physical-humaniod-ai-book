@@ -1,8 +1,30 @@
 ---
-sidebar_label: 'Lesson 7.2: Isaac Sim Python API'
+title: Isaac Sim Python API
+description: Understanding and utilizing Isaac Sim's Python API for robotics simulation
+sidebar_label: Lesson 7.2 - Isaac Sim Python API
 ---
 
-# Lesson 7.2: Isaac Sim Python API
+import LessonHeader from '@site/src/components/LessonHeader';
+import CalloutBlock from '@site/src/components/CalloutBlock';
+import QuizBlock from '@site/src/components/QuizBlock';
+import AIChatPanel from '@site/src/components/AIChatPanel';
+import Breadcrumb from '@site/src/components/Breadcrumb';
+
+<Breadcrumb items={[
+  { label: 'Chapters', href: '/docs/chapters/isaac-sim-sdk-basics' },
+  { label: 'Isaac Sim SDK Basics', href: '/docs/chapters/isaac-sim-sdk-basics' },
+  { label: 'Isaac Sim Python API' }
+]} />
+
+<LessonHeader
+  title="Isaac Sim Python API"
+  subtitle="Understanding and utilizing Isaac Sim's Python API for robotics simulation"
+  chapter="7"
+  lessonNumber="7.2"
+  progress={50}
+/>
+
+# Isaac Sim Python API
 
 ## Overview
 

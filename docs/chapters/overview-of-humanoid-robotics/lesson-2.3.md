@@ -4,6 +4,26 @@ description: "Control architectures and algorithms for humanoid robot motion and
 sidebar_label: "Lesson 2.3 - Humanoid Robot Control Systems"
 ---
 
+import LessonHeader from '@site/src/components/LessonHeader';
+import CalloutBlock from '@site/src/components/CalloutBlock';
+import QuizBlock from '@site/src/components/QuizBlock';
+import AIChatPanel from '@site/src/components/AIChatPanel';
+import Breadcrumb from '@site/src/components/Breadcrumb';
+
+<Breadcrumb items={[
+  { label: 'Chapters', href: '/docs/chapters/overview-of-humanoid-robotics' },
+  { label: 'Overview of Humanoid Robotics', href: '/docs/chapters/overview-of-humanoid-robotics' },
+  { label: 'Humanoid Robot Control Systems' }
+]} />
+
+<LessonHeader
+  title="Humanoid Robot Control Systems"
+  subtitle="Control architectures and algorithms for humanoid robot motion and behavior"
+  chapter="2"
+  lessonNumber="2.3"
+  progress={75}
+/>
+
 # Humanoid Robot Control Systems
 
 ## Learning Objectives

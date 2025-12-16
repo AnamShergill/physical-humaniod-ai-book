@@ -1,8 +1,30 @@
 ---
-sidebar_label: 'Lesson 7.1: Introduction to Isaac Sim'
+title: Introduction to Isaac Sim
+description: Understanding NVIDIA's Isaac Sim platform for advanced robotics simulation
+sidebar_label: Lesson 7.1 - Introduction to Isaac Sim
 ---
 
-# Lesson 7.1: Introduction to Isaac Sim
+import LessonHeader from '@site/src/components/LessonHeader';
+import CalloutBlock from '@site/src/components/CalloutBlock';
+import QuizBlock from '@site/src/components/QuizBlock';
+import AIChatPanel from '@site/src/components/AIChatPanel';
+import Breadcrumb from '@site/src/components/Breadcrumb';
+
+<Breadcrumb items={[
+  { label: 'Chapters', href: '/docs/chapters/isaac-sim-sdk-basics' },
+  { label: 'Isaac Sim SDK Basics', href: '/docs/chapters/isaac-sim-sdk-basics' },
+  { label: 'Introduction to Isaac Sim' }
+]} />
+
+<LessonHeader
+  title="Introduction to Isaac Sim"
+  subtitle="Understanding NVIDIA's Isaac Sim platform for advanced robotics simulation"
+  chapter="7"
+  lessonNumber="7.1"
+  progress={25}
+/>
+
+# Introduction to Isaac Sim
 
 ## Overview
 
