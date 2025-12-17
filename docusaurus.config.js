@@ -33,7 +33,6 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
         theme: {
           customCss: [
             require.resolve('./src/css/custom.css'),
-            require.resolve('./src/css/tailwind.css')
           ],
         },
       }),
@@ -54,8 +53,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
         title: 'Physical AI & Humanoid Robotics',
         logo: {
           alt: 'Physical AI & Humanoid Robotics Textbook Logo',
-          src: 'img/logo.svg',
-          srcDark: 'img/logo-dark.svg', // Add dark mode logo if available
+          src: 'img/logo.png',
+          srcDark: 'img/logo.png', // Using same image for dark mode
         },
         items: [
           {

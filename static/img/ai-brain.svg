@@ -1,0 +1,24 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="brainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3282b8"/>
+      <stop offset="100%" stop-color="#0f4c75"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Brain shape -->
+  <path d="M40 20 C55 20, 65 30, 65 40 C65 50, 55 60, 40 60 C25 60, 15 50, 15 40 C15 30, 25 20, 40 20 Z" fill="url(#brainGradient)"/>
+
+  <!-- Neural connections -->
+  <path d="M30 35 Q40 30 50 35" fill="none" stroke="white" stroke-width="1.5"/>
+  <path d="M30 45 Q40 50 50 45" fill="none" stroke="white" stroke-width="1.5"/>
+  <path d="M35 30 Q40 35 45 30" fill="none" stroke="white" stroke-width="1.5"/>
+  <path d="M35 50 Q40 45 45 50" fill="none" stroke="white" stroke-width="1.5"/>
+
+  <!-- Chip icon -->
+  <rect x="32" y="32" width="16" height="16" rx="2" fill="white" opacity="0.3"/>
+  <rect x="35" y="35" width="2" height="2" fill="white"/>
+  <rect x="40" y="35" width="2" height="2" fill="white"/>
+  <rect x="35" y="40" width="2" height="2" fill="white"/>
+  <rect x="40" y="40" width="2" height="2" fill="white"/>
+</svg>

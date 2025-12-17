@@ -26,6 +26,8 @@ import Breadcrumb from '@site/src/components/Breadcrumb';
 
 # What is Physical AI?
 
+![Physical AI Concept](/img/physical-ai-concept.svg)
+
 ## Learning Objectives
 
 After completing this lesson, you will be able to:

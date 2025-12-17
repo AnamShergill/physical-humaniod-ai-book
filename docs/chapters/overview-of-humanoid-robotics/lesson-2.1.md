@@ -26,6 +26,8 @@ import Breadcrumb from '@site/src/components/Breadcrumb';
 
 # Introduction to Humanoid Robotics
 
+![Humanoid Robotics Concept](/img/humanoid-robotics-concept.svg)
+
 ## Learning Objectives
 
 After completing this lesson, you will be able to:
