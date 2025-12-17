@@ -26,6 +26,8 @@ import Breadcrumb from '@site/src/components/Breadcrumb';
 
 # Physical AI Fundamentals
 
+![Embodied Intelligence Comparison](/img/embodied-intelligence-comparison.jpeg)
+
 ## Learning Objectives
 
 After completing this lesson, you will be able to:

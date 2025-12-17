@@ -24,9 +24,7 @@ import Breadcrumb from '@site/src/components/Breadcrumb';
   progress={25}
 />
 
-# Introduction to Humanoid Robotics
-
-![Humanoid Robotics Concept](/img/humanoid-robotics-concept.svg)
+![Humanoid Robot Architecture](/img/humanoid-robot-architecture.jpeg)
 
 ## Learning Objectives
 

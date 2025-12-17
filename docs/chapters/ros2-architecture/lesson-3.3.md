@@ -26,6 +26,8 @@ import Breadcrumb from '@site/src/components/Breadcrumb';
 
 # ROS 2 Architecture Best Practices
 
+![ROS 2 Physical AI Integration](/img/ros2-physical-ai-integration.jpeg)
+
 ## Learning Objectives
 
 After completing this lesson, you will be able to:

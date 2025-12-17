@@ -26,6 +26,8 @@ import Breadcrumb from '@site/src/components/Breadcrumb';
 
 # Humanoid Robot Control Systems
 
+![Balance Control System](/img/balance-control-system.jpeg)
+
 ## Learning Objectives
 
 After completing this lesson, you will be able to:

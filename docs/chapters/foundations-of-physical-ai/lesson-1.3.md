@@ -26,6 +26,8 @@ import Breadcrumb from '@site/src/components/Breadcrumb';
 
 # Mathematical Foundations for Physical AI
 
+![Physics-Informed Learning Pipeline](/img/physics-informed-learning-pipeline.jpeg)
+
 ## Learning Objectives
 
 After completing this lesson, you will be able to:

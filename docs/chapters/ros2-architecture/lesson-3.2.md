@@ -26,6 +26,8 @@ import Breadcrumb from '@site/src/components/Breadcrumb';
 
 # Launch Files and Parameters
 
+![ROS 2 Communication Patterns](/img/ros2-communication-patterns.jpeg)
+
 ## Learning Objectives
 
 After completing this lesson, you will be able to:

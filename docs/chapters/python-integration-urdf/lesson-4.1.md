@@ -26,6 +26,8 @@ import Breadcrumb from '@site/src/components/Breadcrumb';
 
 # rclpy Python Client Library
 
+![URDF Structure Hierarchy](/img/urdf-structure-hierarchy.jpeg)
+
 ## Learning Objectives
 
 After completing this lesson, you will be able to:

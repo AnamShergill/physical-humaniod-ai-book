@@ -26,6 +26,8 @@ import Breadcrumb from '@site/src/components/Breadcrumb';
 
 # Nodes, Topics, Services, Actions
 
+![ROS 2 Distributed Architecture](/img/ros2-distributed-architecture.jpeg)
+
 ## Learning Objectives
 
 After completing this lesson, you will be able to:

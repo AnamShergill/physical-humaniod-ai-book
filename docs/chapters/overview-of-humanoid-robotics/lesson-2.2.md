@@ -26,6 +26,8 @@ import Breadcrumb from '@site/src/components/Breadcrumb';
 
 # Humanoid Robot Anatomy and Design
 
+![Humanoid Kinematics Chain](/img/humanoid-kinematics-chain.jpeg)
+
 ## Learning Objectives
 
 After completing this lesson, you will be able to:
