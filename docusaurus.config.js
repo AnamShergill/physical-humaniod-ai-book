@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 (module.exports = {
   title: 'Physical AI & Humanoid Robotics Textbook',
   tagline: 'An AI-native textbook covering Physical AI & Humanoid Robotics',
-  url: process.env.URL || 'https://your-vercel-domain.vercel.app', // Vercel will set this automatically during deployment
+  url: process.env.URL || 'https://physical-humaniod-ai-book-8xrs.vercel.app', // Vercel will set this automatically during deployment
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
