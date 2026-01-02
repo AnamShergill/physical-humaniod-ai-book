@@ -67,6 +67,22 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
     },
   ],
 
+
+  customFields: {
+    // Development server configuration for API proxy
+    devServer: {
+      proxy: {
+        '/api': {
+          target: 'http://localhost:8000',
+          changeOrigin: true,
+          pathRewrite: {
+            '^/api': '/api/v1',  // Rewrite /api to /api/v1 on the target
+          },
+        },
+      },
+    },
+  },
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({

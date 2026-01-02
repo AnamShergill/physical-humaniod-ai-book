@@ -101,3 +101,65 @@ async def answer_question(
         "context_used": context_texts,
         "relevance_scores": [result["relevance_score"] for result in context_results]
     }
+
+
+@router.post("/chatbot/query")
+async def query_chatbot(
+    query: str = Query(..., min_length=5, max_length=1000),
+    context: Optional[str] = Query(None)
+):
+    """Chatbot endpoint that answers questions based on textbook content"""
+    try:
+        print(f"Chatbot query received: {query}")
+        print(f"Context received: {context}")
+
+        # Process the context to identify specific lessons/chapters if provided
+        lesson_ids = None
+        if context:
+            # In a real implementation, we would parse the context to identify specific lesson IDs
+            # For now, we'll just log the context for debugging
+            print(f"Context received: {context}")
+            # You could implement logic here to map context like "foundations-of-physical-ai/lesson-1.1"
+            # to specific lesson IDs in the database
+
+        # Search for relevant content based on context
+        if lesson_ids:
+            # If specific lesson IDs are identified, search within those lessons only
+            print("Searching within specific lessons...")
+            context_results = await rag_service.get_relevant_context(query, lesson_ids, top_k=5)
+        else:
+            # Otherwise, search across all content
+            print("Searching across all content...")
+            context_results = await rag_service.search_similar_content(query, top_k=5)
+
+        print(f"Found {len(context_results)} results from RAG search")
+
+        # Build context string
+        context_texts = [result["content"] for result in context_results]
+        sources = [result.get("payload", {}).get("source", "Unknown source") for result in context_results]
+        relevance_scores = [result.get("relevance_score", result.get("score", 0.0)) for result in context_results]
+        context_string = "\n\n".join(context_texts[:3])  # Limit to first 3 chunks
+
+        # Generate a simple answer based on the context
+        if context_string:
+            answer = f"Based on the textbook content: {context_string[:800]}..."
+        else:
+            answer = "I couldn't find relevant information in the textbook to answer your question. The textbook may not have been properly indexed yet."
+
+        print(f"Returning answer: {answer[:100]}...")
+
+        return {
+            "response": answer,
+            "sources": sources,
+            "confidence": max(relevance_scores) if relevance_scores else 0.5
+        }
+    except Exception as e:
+        print(f"Error in chatbot query: {str(e)}")
+        import traceback
+        print(f"Traceback: {traceback.format_exc()}")
+
+        return {
+            "response": f"Sorry, I encountered an error processing your question: {str(e)}",
+            "sources": [],
+            "confidence": 0.0
+        }
