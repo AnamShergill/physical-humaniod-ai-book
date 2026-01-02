@@ -1,0 +1,115 @@
+/* Fresh UI Redesign - New Color Palette */
+
+:root {
+  /* Primary Colors - Vibrant Blue */
+  --ifm-color-primary: #4361ee;
+  --ifm-color-primary-dark: #3a56d4;
+  --ifm-color-primary-darker: #324abc;
+  --ifm-color-primary-darkest: #2a3fa4;
+  --ifm-color-primary-light: #5a75f0;
+  --ifm-color-primary-lighter: #6c84f2;
+  --ifm-color-primary-lightest: #8ea2f5;
+
+  /* Secondary Colors - Vibrant Purple */
+  --ifm-color-secondary: #7209b7;
+  --ifm-color-secondary-dark: #5f089d;
+  --ifm-color-secondary-darker: #4d0782;
+  --ifm-color-secondary-light: #8a29c7;
+  --ifm-color-secondary-lighter: #a149d7;
+  --ifm-color-secondary-lightest: #c581e7;
+
+  /* Accent Colors - Bright Pink */
+  --ifm-color-accent: #f72585;
+  --ifm-color-accent-dark: #d81b60;
+  --ifm-color-accent-light: #f84e9d;
+
+  /* Neutral Colors - Modern Grayscale */
+  --ifm-color-emphasis-0: #000;
+  --ifm-color-emphasis-100: #1c1e21;
+  --ifm-color-emphasis-200: #33363a;
+  --ifm-color-emphasis-300: #4d5257;
+  --ifm-color-emphasis-400: #6a7178;
+  --ifm-color-emphasis-500: #888d92;
+  --ifm-color-emphasis-600: #a2a7ac;
+  --ifm-color-emphasis-700: #b9bcbe;
+  --ifm-color-emphasis-800: #d6d7d8;
+  --ifm-color-emphasis-900: #e4e5e6;
+  --ifm-color-emphasis-1000: #fff;
+
+  /* Backgrounds */
+  --ifm-background-color: #f8f9ff;
+  --ifm-background-surface-color: #ffffff;
+
+  /* Text Colors */
+  --ifm-color-content: #1c1e21;
+  --ifm-color-content-secondary: #4d5257;
+
+  /* Success, Warning, Danger Colors */
+  --ifm-color-success: #4cc9f0;
+  --ifm-color-info: #489fb5;
+  --ifm-color-warning: #f8961e;
+  --ifm-color-danger: #e63946;
+
+  /* Shadow System */
+  --ifm-global-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  --ifm-global-shadow-heavy: 0 10px 25px rgba(0, 0, 0, 0.1);
+  --ifm-global-shadow-light: 0 2px 4px rgba(0, 0, 0, 0.03);
+
+  /* Border Radius */
+  --ifm-global-radius: 12px;
+  --ifm-card-border-radius: 16px;
+  --ifm-button-border-radius: 8px;
+
+  /* Spacing */
+  --ifm-spacing-horizontal: 24px;
+  --ifm-spacing-vertical: 24px;
+
+  /* Container Widths */
+  --ifm-container-width: 1000px;
+  --ifm-container-width-xl: 1200px;
+
+  /* Typography */
+  --ifm-font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
+  --ifm-font-size-base: 16px;
+  --ifm-line-height-base: 1.7;
+  --ifm-heading-font-weight: 600;
+}
+
+/* Dark Mode Colors */
+html[data-theme='dark'] {
+  /* Primary Colors - Adjusted for dark mode */
+  --ifm-color-primary: #5a75f0;
+  --ifm-color-primary-dark: #4361ee;
+  --ifm-color-primary-darker: #3a56d4;
+  --ifm-color-primary-darkest: #324abc;
+  --ifm-color-primary-light: #6c84f2;
+  --ifm-color-primary-lighter: #8ea2f5;
+  --ifm-color-primary-lightest: #a8b8f8;
+
+  /* Secondary Colors - Adjusted for dark mode */
+  --ifm-color-secondary: #a149d7;
+  --ifm-color-secondary-dark: #8a29c7;
+  --ifm-color-secondary-darker: #7209b7;
+  --ifm-color-secondary-light: #c581e7;
+  --ifm-color-secondary-lighter: #d9a7ee;
+  --ifm-color-secondary-lightest: #e9c9f4;
+
+  /* Accent Colors - Adjusted for dark mode */
+  --ifm-color-accent: #f84e9d;
+  --ifm-color-accent-dark: #f72585;
+  --ifm-color-accent-light: #fa7bb4;
+
+  /* Backgrounds for Dark Mode */
+  --ifm-background-color: #121212;
+  --ifm-background-surface-color: #1e1e1e;
+
+  /* Text Colors for Dark Mode */
+  --ifm-color-content: #e6e6e6;
+  --ifm-color-content-secondary: #b3b3b3;
+
+  /* Success, Warning, Danger Colors for Dark Mode */
+  --ifm-color-success: #4cc9f0;
+  --ifm-color-info: #489fb5;
+  --ifm-color-warning: #f8961e;
+  --ifm-color-danger: #e63946;
+}

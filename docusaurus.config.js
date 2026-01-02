@@ -10,6 +10,17 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
+  markdown: {
+    mermaid: true,
+    mdx1Compat: {
+      comments: true,
+      admonitions: true,
+      headingIds: true,
+    },
+    hooks: {
+      onBrokenMarkdownImages: 'ignore', // Ignore broken image references
+    },
+  },
   favicon: 'img/favicon.ico',
   organizationName: 'AnamShergill', // Usually your GitHub org/user name.
   projectName: 'physical-humaniod-ai-book', // Usually your repo name.
@@ -33,10 +44,27 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
         theme: {
           customCss: [
             require.resolve('./src/css/custom.css'),
+            require.resolve('./src/css/colors.css'), // New color palette
+            require.resolve('./src/css/border-styles.css'), // New border styles
+            require.resolve('./src/css/highlight-effects.css'), // New highlight effects
+            require.resolve('./src/css/section-hierarchy.css'), // New section hierarchy
+            require.resolve('./src/css/depth-effects.css'), // New depth effects
+            require.resolve('./src/css/shadow-systems.css'), // New shadow systems
+            require.resolve('./src/css/lesson-separation.css'), // New lesson separation
+            require.resolve('./src/css/navigation-depth.css'), // New navigation depth
+            require.resolve('./src/css/content-containers.css'), // New content containers
+            require.resolve('./src/css/consistent-depth-system.css'), // New consistent depth system
           ],
         },
       }),
     ],
+  ],
+
+  stylesheets: [
+    {
+      href: 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Code+Pro:wght@400;500;600&display=swap',
+      rel: 'stylesheet',
+    },
   ],
 
   themeConfig:

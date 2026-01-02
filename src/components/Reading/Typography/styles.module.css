@@ -1,0 +1,46 @@
+.typography {
+  line-height: var(--ifm-line-height-base);
+  color: var(--ifm-color-content);
+}
+
+.typography--heading {
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  font-weight: 600;
+  color: var(--ifm-color-emphasis-100);
+}
+
+.typography--h1 {
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, var(--ifm-color-primary), var(--ifm-color-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  padding-bottom: 0.5rem;
+}
+
+.typography--h2 {
+  font-size: 2rem;
+  border-bottom: 2px solid var(--ifm-color-primary-light);
+  padding-bottom: 0.5rem;
+}
+
+.typography--h3 {
+  font-size: 1.75rem;
+  color: var(--ifm-color-primary);
+}
+
+.typography--h4 {
+  font-size: 1.5rem;
+  color: var(--ifm-color-emphasis-300);
+}
+
+.typography--body {
+  margin-bottom: 1.5rem;
+}
+
+.typography--caption {
+  font-size: 0.875rem;
+  color: var(--ifm-color-emphasis-600);
+}

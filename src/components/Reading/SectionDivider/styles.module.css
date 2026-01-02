@@ -1,0 +1,26 @@
+.sectionDivider {
+  position: relative;
+  margin: 4rem 0;
+  text-align: center;
+}
+
+.dividerLine {
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--ifm-color-emphasis-400), transparent);
+  border: none;
+  margin: 0;
+}
+
+.dividerDots {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--ifm-background-color);
+  padding: 0 20px;
+  color: var(--ifm-color-emphasis-400);
+  font-weight: bold;
+  font-size: 1.2rem;
+  letter-spacing: 4px;
+  z-index: 2;
+}

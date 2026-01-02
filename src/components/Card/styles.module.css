@@ -1,0 +1,85 @@
+.card {
+  background: var(--ifm-background-surface-color);
+  border-radius: var(--ifm-card-border-radius);
+  box-shadow: var(--ifm-global-shadow-light);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  box-shadow: var(--ifm-global-shadow-heavy);
+  transform: translateY(-3px);
+}
+
+.cardContent {
+  padding: 1.5rem;
+}
+
+.cardHeader {
+  padding: 1.5rem 1.5rem 0 1.5rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  margin-bottom: 1rem;
+}
+
+.cardTitle {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--ifm-heading-color);
+}
+
+.cardImage {
+  width: 100%;
+  border-radius: calc(var(--ifm-card-border-radius) - 1px) calc(var(--ifm-card-border-radius) - 1px) 0 0;
+  margin: 0;
+}
+
+.cardDecoration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--ifm-color-primary), var(--ifm-color-secondary));
+}
+
+/* Depth variations */
+.card--shallow {
+  box-shadow: var(--ifm-global-shadow-light);
+}
+
+.card--medium {
+  box-shadow: var(--ifm-global-shadow-medium);
+}
+
+.card--deep {
+  box-shadow: var(--ifm-global-shadow-heavy);
+}
+
+/* Border variations */
+.card--bordered {
+  border: 1px solid var(--ifm-color-emphasis-300);
+}
+
+.card--borderless {
+  border: none;
+  box-shadow: none;
+  background: transparent;
+}
+
+/* Responsive adjustments */
+@media (max-width: 996px) {
+  .card {
+    margin-bottom: 1rem;
+  }
+
+  .cardContent {
+    padding: 1rem;
+  }
+
+  .cardHeader {
+    padding: 1rem 1rem 0 1rem;
+  }
+}

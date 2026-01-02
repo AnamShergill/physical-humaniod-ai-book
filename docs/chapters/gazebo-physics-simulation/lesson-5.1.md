@@ -26,6 +26,8 @@ import Breadcrumb from '@site/src/components/Breadcrumb';
 
 # Setting up Gazebo
 
+![Gazebo Simulation Environment](/img/gazebo-simulation-environment.jpeg)
+
 ## Learning Objectives
 
 After completing this lesson, you will be able to:

@@ -1,0 +1,290 @@
+/* Visual hierarchy for section levels */
+.section-level-1 {
+  margin: 3rem 0 2rem 0;
+  padding: 2rem 0;
+  border-bottom: 2px solid var(--ifm-color-emphasis-300);
+  position: relative;
+}
+
+.section-level-1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--ifm-color-primary), var(--ifm-color-secondary));
+}
+
+.section-level-1 h1 {
+  font-size: 2.5rem;
+  color: var(--ifm-heading-color);
+  margin: 0;
+  background: linear-gradient(135deg, var(--ifm-color-primary), var(--ifm-color-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-level-2 {
+  margin: 2.5rem 0 1.5rem 0;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  position: relative;
+}
+
+.section-level-2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--ifm-color-secondary), var(--ifm-color-accent));
+}
+
+.section-level-2 h2 {
+  font-size: 2rem;
+  color: var(--ifm-heading-color);
+  margin: 0;
+}
+
+.section-level-3 {
+  margin: 2rem 0 1rem 0;
+  padding: 1rem 0;
+  border-left: 3px solid var(--ifm-color-primary);
+  background: var(--ifm-color-emphasis-50);
+  border-radius: 0 var(--ifm-global-radius) var(--ifm-global-radius) 0;
+}
+
+.section-level-3 h3 {
+  font-size: 1.5rem;
+  color: var(--ifm-heading-color);
+  margin: 0;
+}
+
+.section-level-4 {
+  margin: 1.5rem 0 0.75rem 0;
+  padding: 0.75rem 0;
+  border-left: 2px solid var(--ifm-color-secondary);
+  margin-left: 1rem;
+}
+
+.section-level-4 h4 {
+  font-size: 1.25rem;
+  color: var(--ifm-heading-color);
+  margin: 0;
+}
+
+.section-level-5 {
+  margin: 1.25rem 0 0.5rem 0;
+  padding: 0.5rem 0;
+  border-left: 1px solid var(--ifm-color-accent);
+  margin-left: 2rem;
+}
+
+.section-level-5 h5 {
+  font-size: 1.1rem;
+  color: var(--ifm-heading-color);
+  margin: 0;
+}
+
+.section-level-6 {
+  margin: 1rem 0 0.25rem 0;
+  padding: 0.25rem 0;
+  margin-left: 3rem;
+}
+
+.section-level-6 h6 {
+  font-size: 1rem;
+  color: var(--ifm-heading-color);
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Alternative section styling with cards */
+.section-card {
+  background: var(--ifm-background-surface-color);
+  border-radius: var(--ifm-card-border-radius);
+  box-shadow: var(--ifm-global-shadow-light);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  margin: 2rem 0;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 4px;
+  background: linear-gradient(to bottom, var(--ifm-color-primary), var(--ifm-color-secondary));
+}
+
+.section-card--level-1 {
+  background: linear-gradient(120deg, var(--ifm-background-color), var(--ifm-background-surface-color));
+  border-left: 6px solid var(--ifm-color-primary);
+}
+
+.section-card--level-2 {
+  background: var(--ifm-background-surface-color);
+  border-left: 4px solid var(--ifm-color-secondary);
+}
+
+.section-card--level-3 {
+  background: var(--ifm-color-emphasis-50);
+  border-left: 3px solid var(--ifm-color-accent);
+}
+
+.section-card--level-4 {
+  background: var(--ifm-color-emphasis-100);
+  border-left: 2px solid var(--ifm-color-primary-light);
+}
+
+/* Decorative elements for sections */
+.section-decorator {
+  position: relative;
+  margin: 2rem 0;
+}
+
+.section-decorator::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--ifm-color-emphasis-300), transparent);
+  z-index: 1;
+}
+
+.section-decorator-content {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  background: var(--ifm-background-color);
+  padding: 0 1rem;
+  text-align: center;
+  color: var(--ifm-color-emphasis-600);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+/* Section navigation indicators */
+.section-nav {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem 0;
+  padding: 1rem;
+  background: var(--ifm-color-emphasis-100);
+  border-radius: var(--ifm-global-radius);
+  border-left: 4px solid var(--ifm-color-primary);
+}
+
+.section-nav-item {
+  flex: 1;
+  text-align: center;
+  padding: 1rem;
+  background: var(--ifm-background-surface-color);
+  border-radius: var(--ifm-global-radius);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  transition: all 0.2s ease;
+}
+
+.section-nav-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--ifm-global-shadow-medium);
+  border-color: var(--ifm-color-primary);
+}
+
+.section-nav-title {
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  color: var(--ifm-heading-color);
+}
+
+.section-nav-description {
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-600);
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 996px) {
+  .section-level-1 {
+    margin: 2rem 0 1.5rem 0;
+    padding: 1.5rem 0;
+  }
+
+  .section-level-1 h1 {
+    font-size: 2rem;
+  }
+
+  .section-level-2 {
+    margin: 2rem 0 1rem 0;
+    padding: 1rem 0;
+  }
+
+  .section-level-2 h2 {
+    font-size: 1.75rem;
+  }
+
+  .section-level-3 {
+    margin: 1.5rem 0 0.75rem 0;
+    padding: 0.75rem 0;
+  }
+
+  .section-level-3 h3 {
+    font-size: 1.3rem;
+  }
+
+  .section-card {
+    margin: 1.5rem 0;
+    padding: 1rem;
+  }
+
+  .section-nav {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-level-1 h1 {
+    font-size: 1.8rem;
+  }
+
+  .section-level-2 h2 {
+    font-size: 1.5rem;
+  }
+
+  .section-level-3 h3 {
+    font-size: 1.2rem;
+  }
+
+  .section-card {
+    padding: 0.75rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  .section-level-1,
+  .section-level-2,
+  .section-level-3,
+  .section-level-4,
+  .section-level-5,
+  .section-level-6 {
+    border: 1px solid var(--ifm-color-emphasis-300);
+    page-break-inside: avoid;
+  }
+
+  .section-card {
+    box-shadow: none;
+    border: 1px solid var(--ifm-color-emphasis-300);
+  }
+}

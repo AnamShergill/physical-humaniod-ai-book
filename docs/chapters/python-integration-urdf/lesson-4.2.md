@@ -26,6 +26,8 @@ import Breadcrumb from '@site/src/components/Breadcrumb';
 
 # Creating and Using URDF for Humanoids
 
+![URDF Joints Relationship](/img/urdf-joints-relationship.jpeg)
+
 ## Learning Objectives
 
 After completing this lesson, you will be able to:

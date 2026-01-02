@@ -25,6 +25,7 @@
     "prism-react-renderer": "^1.2.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-wrap-balancer": "^1.1.1",
     "styled-components": "^6.1.19",
     "url-loader": "^4.1.1"
   },

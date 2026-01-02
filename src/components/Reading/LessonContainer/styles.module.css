@@ -1,0 +1,244 @@
+.lessonContainer {
+  background: var(--ifm-background-surface-color);
+  border-radius: var(--ifm-card-border-radius);
+  box-shadow: var(--ifm-global-shadow-light);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  margin: 2rem 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.lessonContainer:hover {
+  box-shadow: var(--ifm-global-shadow-medium);
+  border-color: var(--ifm-color-emphasis-300);
+}
+
+.lessonContainer--featured {
+  border-left: 4px solid var(--ifm-color-primary);
+  box-shadow: var(--ifm-global-shadow-medium);
+}
+
+.lessonContainer--important {
+  border-left: 4px solid var(--ifm-color-accent);
+  box-shadow: var(--ifm-global-shadow-heavy);
+}
+
+.lessonContainer--interactive {
+  border: 2px solid var(--ifm-color-secondary);
+  background: var(--ifm-color-emphasis-50);
+}
+
+.lessonHeader {
+  padding: 1.5rem;
+  background: linear-gradient(120deg, var(--ifm-background-color), var(--ifm-background-surface-color));
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  position: relative;
+}
+
+.lessonTitle {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--ifm-heading-color);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.lessonSubtitle {
+  margin: 0.5rem 0 0 0;
+  color: var(--ifm-color-emphasis-600);
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.lessonIcon {
+  font-size: 1.2rem;
+  color: var(--ifm-color-primary);
+}
+
+.lessonContent {
+  padding: 1.5rem;
+}
+
+.lessonFooter {
+  padding: 1rem 1.5rem;
+  background: var(--ifm-color-emphasis-100);
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.lessonTags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.lessonTag {
+  background: var(--ifm-color-emphasis-200);
+  color: var(--ifm-color-emphasis-800);
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--ifm-global-radius);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.lessonProgress {
+  height: 4px;
+  background: var(--ifm-color-emphasis-200);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.lessonProgressFill {
+  height: 100%;
+  background: var(--ifm-color-primary);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.lessonDecoration {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--ifm-color-primary-lighter), var(--ifm-color-secondary-lighter));
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+  opacity: 0.1;
+}
+
+.lessonNumber {
+  background: var(--ifm-color-primary);
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.lessonBadge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--ifm-color-accent);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  z-index: 10;
+}
+
+.lessonBadge--new {
+  background: var(--ifm-color-success);
+}
+
+.lessonBadge--updated {
+  background: var(--ifm-color-warning);
+}
+
+.lessonBadge--coming-soon {
+  background: var(--ifm-color-info);
+}
+
+/* Visual hierarchy for nested sections */
+.lessonSection {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  border-left: 2px solid var(--ifm-color-emphasis-300);
+  background: var(--ifm-color-emphasis-50);
+  border-radius: 0 var(--ifm-global-radius) var(--ifm-global-radius) 0;
+}
+
+.lessonSection--level-2 {
+  border-left-color: var(--ifm-color-primary);
+  background: var(--ifm-color-emphasis-100);
+  margin-left: 1rem;
+}
+
+.lessonSection--level-3 {
+  border-left-color: var(--ifm-color-secondary);
+  background: var(--ifm-color-emphasis-150);
+  margin-left: 2rem;
+}
+
+.lessonSection--level-4 {
+  border-left-color: var(--ifm-color-accent);
+  background: var(--ifm-color-emphasis-200);
+  margin-left: 3rem;
+}
+
+.lessonSectionHeader {
+  margin: 0 0 0.75rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.lessonSectionTitle {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--ifm-heading-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 996px) {
+  .lessonContainer {
+    margin: 1.5rem 0;
+  }
+
+  .lessonHeader {
+    padding: 1rem;
+  }
+
+  .lessonContent {
+    padding: 1rem;
+  }
+
+  .lessonFooter {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .lessonSection {
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .lessonTitle {
+    font-size: 1.3rem;
+  }
+
+  .lessonSection {
+    margin: 1rem 0;
+  }
+}
+
+/* Print styles */
+@media print {
+  .lessonContainer {
+    box-shadow: none;
+    border: 1px solid var(--ifm-color-emphasis-300);
+  }
+
+  .lessonDecoration {
+    display: none;
+  }
+
+  .lessonBadge {
+    display: none;
+  }
+}

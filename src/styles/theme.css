@@ -1,0 +1,66 @@
+:root {
+  /* Typography */
+  --ifm-font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
+  --ifm-font-size-base: 16px;
+  --ifm-line-height-base: 1.7;
+  --ifm-heading-font-weight: 600;
+
+  /* Spacing */
+  --ifm-spacing-horizontal: 24px;
+  --ifm-spacing-vertical: 24px;
+
+  /* Container width for optimal reading */
+  --ifm-container-width: 800px;
+  --ifm-container-width-xl: 1200px;
+
+  /* Colors - Academic/Professional Palette */
+  --ifm-color-primary: #2c6e49;
+  --ifm-color-primary-dark: #255d3e;
+  --ifm-color-primary-darker: #23573a;
+  --ifm-color-primary-darkest: #1d4830;
+  --ifm-color-primary-light: #398a5f;
+  --ifm-color-primary-lighter: #409568;
+  --ifm-color-primary-lightest: #54a87a;
+
+  /* Neutral colors */
+  --ifm-color-emphasis-0: #000;
+  --ifm-color-emphasis-100: #1c1e21;
+  --ifm-color-emphasis-200: #33363a;
+  --ifm-color-emphasis-300: #4d5257;
+  --ifm-color-emphasis-400: #6a7178;
+  --ifm-color-emphasis-500: #888d92;
+  --ifm-color-emphasis-600: #a2a7ac;
+  --ifm-color-emphasis-700: #b9bcbe;
+  --ifm-color-emphasis-800: #d6d7d8;
+  --ifm-color-emphasis-900: #e4e5e6;
+  --ifm-color-emphasis-1000: #fff;
+
+  /* Backgrounds */
+  --ifm-background-color: #fff;
+  --ifm-background-surface-color: #fff;
+
+  /* Text */
+  --ifm-color-content: #1c1e21;
+  --ifm-color-content-secondary: #4d5257;
+
+  /* Border radius */
+  --ifm-global-radius: 8px;
+  --ifm-card-border-radius: var(--ifm-global-radius);
+
+  /* Shadow */
+  --ifm-global-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1);
+  --ifm-global-shadow-heavy: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+  /* Code block styling */
+  --ifm-code-border-radius: 6px;
+  --ifm-pre-background: #f6f8fa;
+
+  /* Reading-specific variables */
+  --reading-line-width: 65ch; /* Optimal for reading */
+  --reading-line-height: 1.7;
+  --reading-paragraph-spacing: 1.5rem;
+
+  /* Header heights for layout calculations */
+  --ifm-navbar-height: 60px;
+  --sidebar-width: 280px;
+}

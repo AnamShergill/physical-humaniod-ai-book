@@ -1,0 +1,202 @@
+/* Border styles for visual separation */
+.border {
+  border: 1px solid var(--ifm-color-emphasis-300);
+}
+
+.border--primary {
+  border: 2px solid var(--ifm-color-primary);
+}
+
+.border--secondary {
+  border: 2px solid var(--ifm-color-secondary);
+}
+
+.border--accent {
+  border: 2px solid var(--ifm-color-accent);
+}
+
+.border--top {
+  border-top: 1px solid var(--ifm-color-emphasis-300);
+}
+
+.border--bottom {
+  border-bottom: 1px solid var(--ifm-color-emphasis-300);
+}
+
+.border--left {
+  border-left: 1px solid var(--ifm-color-emphasis-300);
+}
+
+.border--right {
+  border-right: 1px solid var(--ifm-color-emphasis-300);
+}
+
+.border--dashed {
+  border: 1px dashed var(--ifm-color-emphasis-400);
+}
+
+.border--dotted {
+  border: 1px dotted var(--ifm-color-emphasis-400);
+}
+
+.border--double {
+  border: 3px double var(--ifm-color-emphasis-300);
+}
+
+.border--rounded {
+  border-radius: var(--ifm-global-radius);
+}
+
+.border--rounded-lg {
+  border-radius: var(--ifm-card-border-radius);
+}
+
+.border--rounded-xl {
+  border-radius: calc(var(--ifm-card-border-radius) * 1.5);
+}
+
+.border--rounded-full {
+  border-radius: 9999px;
+}
+
+/* Gradient borders */
+.border--gradient {
+  border: none;
+  position: relative;
+}
+
+.border--gradient::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: var(--ifm-global-radius);
+  padding: 2px;
+  background: linear-gradient(45deg, var(--ifm-color-primary), var(--ifm-color-secondary), var(--ifm-color-accent));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+}
+
+.border--gradient-top {
+  border-top: 3px solid;
+  border-image: linear-gradient(90deg, transparent, var(--ifm-color-primary), transparent) 1;
+}
+
+.border--gradient-bottom {
+  border-bottom: 3px solid;
+  border-image: linear-gradient(90deg, transparent, var(--ifm-color-primary), transparent) 1;
+}
+
+.border--gradient-left {
+  border-left: 3px solid;
+  border-image: linear-gradient(180deg, transparent, var(--ifm-color-primary), transparent) 1;
+}
+
+.border--gradient-right {
+  border-right: 3px solid;
+  border-image: linear-gradient(180deg, transparent, var(--ifm-color-primary), transparent) 1;
+}
+
+/* Animated borders */
+.border--animated {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.border--animated:hover {
+  border-color: var(--ifm-color-primary);
+}
+
+.border--animated::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  border: 2px solid transparent;
+  background: linear-gradient(45deg, var(--ifm-color-primary), var(--ifm-color-secondary)) content-box;
+  padding: 2px;
+  margin: -2px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.border--animated:hover::after {
+  opacity: 1;
+}
+
+/* Section dividers */
+.divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--ifm-color-emphasis-400), transparent);
+  margin: 2rem 0;
+  border: none;
+}
+
+.divider--thick {
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--ifm-color-emphasis-300), transparent);
+}
+
+.divider--gradient {
+  height: 4px;
+  background: linear-gradient(90deg, transparent, var(--ifm-color-primary), var(--ifm-color-secondary), transparent);
+}
+
+.divider--dashed {
+  height: 0;
+  border-top: 1px dashed var(--ifm-color-emphasis-400);
+  margin: 1.5rem 0;
+}
+
+/* Visual separation utilities */
+.separation--small {
+  margin: 0.5rem 0;
+}
+
+.separation--medium {
+  margin: 1rem 0;
+}
+
+.separation--large {
+  margin: 2rem 0;
+}
+
+.separation--xl {
+  margin: 3rem 0;
+}
+
+/* Focus rings for accessibility */
+.focus-ring {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}
+
+.focus-ring--secondary {
+  outline: 2px solid var(--ifm-color-secondary);
+}
+
+.focus-ring--accent {
+  outline: 2px solid var(--ifm-color-accent);
+}
+
+/* Responsive border adjustments */
+@media (max-width: 996px) {
+  .border--responsive {
+    border-width: 1px;
+  }
+
+  .divider {
+    margin: 1.5rem 0;
+  }
+
+  .divider--xl {
+    margin: 2rem 0;
+  }
+}

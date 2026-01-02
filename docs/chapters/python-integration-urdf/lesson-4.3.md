@@ -26,6 +26,8 @@ import Breadcrumb from '@site/src/components/Breadcrumb';
 
 # Advanced URDF Concepts and Integration
 
+![Advanced URDF Integration](/img/advanced-urdf-integration.jpeg)
+
 ## Learning Objectives
 
 After completing this lesson, you will be able to:

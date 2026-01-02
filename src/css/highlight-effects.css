@@ -1,0 +1,234 @@
+/* Highlight effects for emphasis */
+.highlight {
+  background: linear-gradient(120deg, var(--ifm-color-primary-lighter) 0%, var(--ifm-color-primary-light) 100%);
+  padding: 0.125rem 0.25rem;
+  border-radius: var(--ifm-global-radius);
+  color: var(--ifm-color-emphasis-800);
+}
+
+.highlight--secondary {
+  background: linear-gradient(120deg, var(--ifm-color-secondary-lighter) 0%, var(--ifm-color-secondary-light) 100%);
+  color: var(--ifm-color-emphasis-800);
+}
+
+.highlight--accent {
+  background: linear-gradient(120deg, var(--ifm-color-accent-lighter) 0%, var(--ifm-color-accent-light) 100%);
+  color: var(--ifm-color-emphasis-800);
+}
+
+.highlight--gradient {
+  background: linear-gradient(45deg, var(--ifm-color-primary), var(--ifm-color-secondary), var(--ifm-color-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.highlight--glow {
+  background: var(--ifm-color-emphasis-100);
+  box-shadow: 0 0 10px rgba(100, 149, 237, 0.3);
+  padding: 0.125rem 0.25rem;
+  border-radius: var(--ifm-global-radius);
+}
+
+.highlight--pulse {
+  animation: pulse 2s infinite;
+  background: var(--ifm-color-primary-light);
+  padding: 0.125rem 0.25rem;
+  border-radius: var(--ifm-global-radius);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(100, 149, 237, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(100, 149, 237, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(100, 149, 237, 0);
+  }
+}
+
+.highlight--animated {
+  position: relative;
+  display: inline-block;
+}
+
+.highlight--animated::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, var(--ifm-color-primary), var(--ifm-color-secondary));
+  opacity: 0.1;
+  border-radius: var(--ifm-global-radius);
+  transition: opacity 0.3s ease;
+}
+
+.highlight--animated:hover::before {
+  opacity: 0.3;
+}
+
+.highlight--striped {
+  background: repeating-linear-gradient(
+    45deg,
+    var(--ifm-color-primary-lighter),
+    var(--ifm-color-primary-lighter) 10px,
+    var(--ifm-color-primary-light) 10px,
+    var(--ifm-color-primary-light) 20px
+  );
+  padding: 0.125rem 0.25rem;
+  border-radius: var(--ifm-global-radius);
+}
+
+.highlight--bordered {
+  background: var(--ifm-color-emphasis-100);
+  border: 1px solid var(--ifm-color-primary);
+  padding: 0.125rem 0.25rem;
+  border-radius: var(--ifm-global-radius);
+}
+
+.highlight--rounded {
+  background: var(--ifm-color-primary-light);
+  padding: 0.125rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+}
+
+/* Hover effects */
+.highlight--hover {
+  transition: all 0.2s ease;
+  background: var(--ifm-color-emphasis-100);
+  padding: 0.125rem 0.25rem;
+  border-radius: var(--ifm-global-radius);
+}
+
+.highlight--hover:hover {
+  background: linear-gradient(120deg, var(--ifm-color-primary-lighter) 0%, var(--ifm-color-primary-light) 100%);
+  color: var(--ifm-color-emphasis-900);
+}
+
+.highlight--hover-secondary:hover {
+  background: linear-gradient(120deg, var(--ifm-color-secondary-lighter) 0%, var(--ifm-color-secondary-light) 100%);
+}
+
+.highlight--hover-accent:hover {
+  background: linear-gradient(120deg, var(--ifm-color-accent-lighter) 0%, var(--ifm-color-accent-light) 100%);
+}
+
+/* Underline effects */
+.underline--highlight {
+  position: relative;
+  text-decoration: none;
+}
+
+.underline--highlight::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--ifm-color-primary);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.underline--highlight:hover::after {
+  transform: scaleX(1);
+}
+
+.underline--gradient {
+  position: relative;
+  text-decoration: none;
+}
+
+.underline--gradient::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--ifm-color-primary), var(--ifm-color-secondary));
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.underline--gradient:hover::after {
+  transform: scaleX(1);
+}
+
+/* Background highlights */
+.bg-highlight {
+  background: linear-gradient(120deg, rgba(100, 149, 237, 0.1) 0%, rgba(100, 149, 237, 0.2) 100%);
+  padding: 1rem;
+  border-radius: var(--ifm-global-radius);
+  margin: 1rem 0;
+}
+
+.bg-highlight--secondary {
+  background: linear-gradient(120deg, rgba(255, 105, 180, 0.1) 0%, rgba(255, 105, 180, 0.2) 100%);
+}
+
+.bg-highlight--accent {
+  background: linear-gradient(120deg, rgba(56, 178, 172, 0.1) 0%, rgba(56, 178, 172, 0.2) 100%);
+}
+
+/* Code highlights */
+.code-highlight {
+  background: var(--ifm-color-emphasis-100);
+  border-left: 3px solid var(--ifm-color-primary);
+  padding: 1rem;
+  border-radius: 0 var(--ifm-global-radius) var(--ifm-global-radius) 0;
+  margin: 1rem 0;
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.9rem;
+}
+
+.code-highlight--secondary {
+  border-left-color: var(--ifm-color-secondary);
+}
+
+.code-highlight--accent {
+  border-left-color: var(--ifm-color-accent);
+}
+
+/* Animated highlight for important content */
+.highlight--important {
+  position: relative;
+  background: linear-gradient(120deg, var(--ifm-color-accent-lighter) 0%, var(--ifm-color-accent-light) 100%);
+  padding: 1rem;
+  border-radius: var(--ifm-global-radius);
+  border-left: 4px solid var(--ifm-color-accent);
+  animation: highlight-pulse 2s infinite;
+}
+
+@keyframes highlight-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(56, 178, 172, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(56, 178, 172, 0);
+  }
+}
+
+/* Responsive highlight adjustments */
+@media (max-width: 996px) {
+  .highlight {
+    padding: 0.1rem 0.2rem;
+    font-size: 0.9rem;
+  }
+
+  .bg-highlight {
+    padding: 0.75rem;
+    margin: 0.75rem 0;
+  }
+
+  .code-highlight {
+    padding: 0.75rem;
+  }
+}

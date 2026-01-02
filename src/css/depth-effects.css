@@ -1,0 +1,346 @@
+/* Depth effects for content containers */
+.depth-container {
+  position: relative;
+  background: var(--ifm-background-surface-color);
+  border-radius: var(--ifm-card-border-radius);
+  box-shadow: var(--ifm-global-shadow-light);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.depth-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0) 50%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.depth-container:hover {
+  box-shadow: var(--ifm-global-shadow-heavy);
+  transform: translateY(-2px);
+  border-color: var(--ifm-color-emphasis-300);
+}
+
+.depth-container--shallow {
+  box-shadow: var(--ifm-global-shadow-light);
+}
+
+.depth-container--medium {
+  box-shadow: var(--ifm-global-shadow-medium);
+}
+
+.depth-container--deep {
+  box-shadow: var(--ifm-global-shadow-heavy);
+}
+
+.depth-container--floating {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1), 0 5px 10px rgba(0, 0, 0, 0.05);
+  transform: translateY(-5px);
+}
+
+.depth-container--floating:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15), 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Layered depth effect */
+.depth-layer {
+  position: relative;
+}
+
+.depth-layer::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  background: var(--ifm-background-color);
+  border-radius: var(--ifm-card-border-radius);
+  z-index: -1;
+}
+
+.depth-layer::after {
+  content: '';
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  background: var(--ifm-background-surface-color);
+  border-radius: var(--ifm-card-border-radius);
+  z-index: -2;
+}
+
+/* Gradient depth effect */
+.depth-gradient {
+  position: relative;
+  background: var(--ifm-background-surface-color);
+  border-radius: var(--ifm-card-border-radius);
+  overflow: hidden;
+}
+
+.depth-gradient::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), transparent);
+  z-index: 1;
+}
+
+.depth-gradient::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.1), transparent);
+  z-index: 1;
+}
+
+/* Inner shadow effect */
+.depth-inner {
+  position: relative;
+  background: var(--ifm-background-surface-color);
+  border-radius: var(--ifm-card-border-radius);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.depth-inner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: var(--ifm-card-border-radius);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1),
+              inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  pointer-events: none;
+}
+
+/* Parallax depth effect */
+.depth-parallax {
+  position: relative;
+  background: var(--ifm-background-surface-color);
+  border-radius: var(--ifm-card-border-radius);
+  overflow: hidden;
+}
+
+.depth-parallax::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
+.depth-parallax:hover::before {
+  transform: scale(1.1);
+}
+
+/* Multi-level depth containers */
+.depth-level-1 {
+  background: var(--ifm-background-surface-color);
+  border-radius: var(--ifm-card-border-radius);
+  box-shadow: var(--ifm-global-shadow-light);
+  border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.depth-level-2 {
+  background: var(--ifm-background-color);
+  border-radius: var(--ifm-card-border-radius);
+  box-shadow: var(--ifm-global-shadow-medium);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.depth-level-3 {
+  background: var(--ifm-color-emphasis-50);
+  border-radius: var(--ifm-global-radius);
+  box-shadow: var(--ifm-global-shadow-light);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  margin: 0.75rem;
+  padding: 0.75rem;
+}
+
+/* Content card with depth */
+.content-card {
+  background: var(--ifm-background-surface-color);
+  border-radius: var(--ifm-card-border-radius);
+  box-shadow: var(--ifm-global-shadow-light);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.content-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--ifm-color-primary), var(--ifm-color-secondary));
+}
+
+.content-card:hover {
+  box-shadow: var(--ifm-global-shadow-heavy);
+  transform: translateY(-3px);
+  border-color: var(--ifm-color-emphasis-300);
+}
+
+.content-card--primary {
+  border-left: 4px solid var(--ifm-color-primary);
+}
+
+.content-card--secondary {
+  border-left: 4px solid var(--ifm-color-secondary);
+}
+
+.content-card--accent {
+  border-left: 4px solid var(--ifm-color-accent);
+}
+
+/* Depth for article sections */
+.article-section {
+  background: var(--ifm-background-surface-color);
+  border-radius: var(--ifm-card-border-radius);
+  box-shadow: var(--ifm-global-shadow-light);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  margin: 2rem 0;
+  padding: 2rem;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.article-section:hover {
+  box-shadow: var(--ifm-global-shadow-medium);
+  transform: translateY(-2px);
+}
+
+.article-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, var(--ifm-color-primary), var(--ifm-color-secondary), var(--ifm-color-accent));
+}
+
+/* Depth for feature sections */
+.feature-section {
+  background: var(--ifm-background-surface-color);
+  border-radius: var(--ifm-card-border-radius);
+  box-shadow: var(--ifm-global-shadow-light);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  margin: 2rem 0;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: linear-gradient(45deg, var(--ifm-color-primary), var(--ifm-color-secondary));
+}
+
+.feature-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--ifm-color-emphasis-300);
+}
+
+/* Responsive depth adjustments */
+@media (max-width: 996px) {
+  .depth-container {
+    margin: 1rem 0;
+    padding: 1rem;
+  }
+
+  .content-card {
+    margin: 1rem 0;
+    padding: 1rem;
+  }
+
+  .article-section,
+  .feature-section {
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .depth-container {
+    box-shadow: var(--ifm-global-shadow-light);
+  }
+
+  .content-card {
+    margin: 0.75rem 0;
+    padding: 0.75rem;
+  }
+
+  .article-section,
+  .feature-section {
+    margin: 1rem 0;
+    padding: 1rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  .depth-container,
+  .content-card,
+  .article-section,
+  .feature-section {
+    box-shadow: none;
+    border: 1px solid var(--ifm-color-emphasis-300);
+    background: var(--ifm-background-surface-color);
+  }
+
+  .depth-container::before,
+  .depth-container::after,
+  .content-card::before,
+  .article-section::before,
+  .feature-section::before,
+  .feature-section::after {
+    display: none;
+  }
+}

@@ -1,0 +1,46 @@
+.tip {
+  border-radius: var(--ifm-global-radius);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border-left-width: 4px;
+  border-left-color: var(--ifm-color-success);
+  background-color: rgba(var(--ifm-color-success-rgb), 0.05);
+  box-shadow: var(--ifm-global-shadow);
+  border: 1px solid rgba(var(--ifm-color-success-rgb), 0.2);
+  transition: all 0.3s ease;
+}
+
+.tip:hover {
+  box-shadow: var(--ifm-global-shadow-heavy);
+  transform: translateY(-2px);
+}
+
+.tipHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.tipIcon {
+  margin-right: 0.75rem;
+  font-size: 1.2rem;
+}
+
+.tipTitle {
+  margin: 0;
+  font-weight: 600;
+  color: var(--ifm-color-success);
+  font-size: 1.1rem;
+}
+
+.tipContent {
+  color: var(--ifm-color-content);
+}
+
+.tipContent p {
+  margin-bottom: 0.5rem;
+}
+
+.tipContent p:last-child {
+  margin-bottom: 0;
+}

@@ -1,0 +1,490 @@
+/* Consistent depth system across all pages */
+:root {
+  /* Depth levels */
+  --ifm-depth-level-0: none;
+  --ifm-depth-level-1: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --ifm-depth-level-2: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  --ifm-depth-level-3: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  --ifm-depth-level-4: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  --ifm-depth-level-5: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+/* Apply consistent depth system to main page elements */
+.main-container {
+  position: relative;
+  min-height: 100vh;
+  background: var(--ifm-background-color);
+  padding: 2rem 0;
+}
+
+.main-content {
+  max-width: var(--ifm-container-width-xl);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Page header with depth */
+.page-header {
+  background: var(--ifm-background-surface-color);
+  border-radius: var(--ifm-card-border-radius);
+  box-shadow: var(--ifm-depth-level-2);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  margin-bottom: 2rem;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, var(--ifm-color-primary), var(--ifm-color-secondary));
+}
+
+.page-header-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--ifm-heading-color);
+  margin: 0 0 1rem 0;
+  background: linear-gradient(135deg, var(--ifm-color-primary), var(--ifm-color-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.page-header-subtitle {
+  font-size: 1.2rem;
+  color: var(--ifm-color-emphasis-600);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Consistent card depth across all pages */
+.card-depth-1 {
+  box-shadow: var(--ifm-depth-level-1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card-depth-1:hover {
+  box-shadow: var(--ifm-depth-level-2);
+  transform: translateY(-2px);
+}
+
+.card-depth-2 {
+  box-shadow: var(--ifm-depth-level-2);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card-depth-2:hover {
+  box-shadow: var(--ifm-depth-level-3);
+  transform: translateY(-3px);
+}
+
+.card-depth-3 {
+  box-shadow: var(--ifm-depth-level-3);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card-depth-3:hover {
+  box-shadow: var(--ifm-depth-level-4);
+  transform: translateY(-4px);
+}
+
+/* Content sections with consistent depth */
+.content-section {
+  background: var(--ifm-background-surface-color);
+  border-radius: var(--ifm-card-border-radius);
+  box-shadow: var(--ifm-depth-level-1);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  margin: 2rem 0;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.content-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--ifm-color-primary), var(--ifm-color-secondary));
+}
+
+.content-section:hover {
+  box-shadow: var(--ifm-depth-level-2);
+  border-color: var(--ifm-color-emphasis-300);
+}
+
+.content-section--featured {
+  box-shadow: var(--ifm-depth-level-3);
+  border-left: 4px solid var(--ifm-color-primary);
+}
+
+.content-section--featured:hover {
+  box-shadow: var(--ifm-depth-level-4);
+}
+
+/* Sidebar with depth */
+.sidebar-depth {
+  background: var(--ifm-background-surface-color);
+  border-radius: var(--ifm-card-border-radius);
+  box-shadow: var(--ifm-depth-level-2);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  margin: 1rem 0;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.sidebar-depth::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--ifm-color-secondary), var(--ifm-color-accent));
+}
+
+/* Navigation elements with depth */
+.nav-depth {
+  background: var(--ifm-background-surface-color);
+  border-radius: var(--ifm-card-border-radius);
+  box-shadow: var(--ifm-depth-level-1);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  margin: 1rem 0;
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+.nav-depth:hover {
+  box-shadow: var(--ifm-depth-level-2);
+  border-color: var(--ifm-color-emphasis-300);
+}
+
+.nav-depth-item {
+  padding: 0.75rem 1rem;
+  margin: 0.25rem 0;
+  border-radius: var(--ifm-global-radius);
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-depth-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0) 50%,
+    rgba(0, 0, 0, 0.05) 100%
+  );
+  border-radius: var(--ifm-global-radius);
+  z-index: 1;
+}
+
+.nav-depth-item-content {
+  position: relative;
+  z-index: 2;
+}
+
+.nav-depth-item:hover {
+  background: var(--ifm-color-emphasis-100);
+  transform: translateX(4px);
+}
+
+.nav-depth-item--active {
+  background: var(--ifm-color-primary-light);
+  color: var(--ifm-color-emphasis-900);
+  font-weight: 600;
+  border-left: 3px solid var(--ifm-color-primary);
+}
+
+/* Footer with depth */
+.footer-depth {
+  background: var(--ifm-background-surface-color);
+  border-radius: var(--ifm-card-border-radius) var(--ifm-card-border-radius) 0 0;
+  box-shadow: var(--ifm-depth-level-2);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-bottom: none;
+  margin-top: 3rem;
+  padding: 2rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-depth::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--ifm-color-accent), var(--ifm-color-primary));
+}
+
+/* Modal and overlay depth */
+.modal-depth {
+  background: var(--ifm-background-surface-color);
+  border-radius: var(--ifm-card-border-radius);
+  box-shadow: var(--ifm-depth-level-4);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  position: relative;
+  overflow: hidden;
+}
+
+.modal-depth::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, var(--ifm-color-primary), var(--ifm-color-secondary));
+}
+
+/* Button depth */
+.button-depth {
+  box-shadow: var(--ifm-depth-level-1);
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.button-depth::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0) 50%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  z-index: 1;
+}
+
+.button-depth-content {
+  position: relative;
+  z-index: 2;
+}
+
+.button-depth:hover {
+  box-shadow: var(--ifm-depth-level-2);
+  transform: translateY(-1px);
+}
+
+.button-depth:active {
+  box-shadow: var(--ifm-depth-level-1);
+  transform: translateY(0);
+}
+
+/* Input depth */
+.input-depth {
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s ease;
+  position: relative;
+}
+
+.input-depth:focus {
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05), 0 0 0 3px rgba(100, 149, 237, 0.1);
+}
+
+/* Consistent depth for different content types */
+.code-block-depth {
+  background: var(--ifm-background-surface-color);
+  border-radius: var(--ifm-global-radius);
+  box-shadow: var(--ifm-depth-level-1);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  margin: 1.5rem 0;
+  overflow: hidden;
+}
+
+.code-block-depth::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--ifm-color-primary);
+}
+
+.table-depth {
+  background: var(--ifm-background-surface-color);
+  border-radius: var(--ifm-global-radius);
+  box-shadow: var(--ifm-depth-level-1);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  margin: 1.5rem 0;
+  overflow: hidden;
+}
+
+.table-depth thead th {
+  background: var(--ifm-color-emphasis-100);
+}
+
+/* Depth for media elements */
+.image-depth {
+  border-radius: var(--ifm-global-radius);
+  box-shadow: var(--ifm-depth-level-1);
+  transition: box-shadow 0.3s ease;
+}
+
+.image-depth:hover {
+  box-shadow: var(--ifm-depth-level-2);
+}
+
+.video-depth {
+  border-radius: var(--ifm-card-border-radius);
+  box-shadow: var(--ifm-depth-level-2);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.video-depth:hover {
+  box-shadow: var(--ifm-depth-level-3);
+}
+
+/* Depth for interactive elements */
+.interactive-depth {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.interactive-depth::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0) 50%,
+    rgba(0, 0, 0, 0.05) 100%
+  );
+  z-index: 1;
+}
+
+.interactive-depth-content {
+  position: relative;
+  z-index: 2;
+}
+
+.interactive-depth:hover {
+  box-shadow: var(--ifm-depth-level-2);
+  transform: translateY(-2px);
+}
+
+/* Responsive depth adjustments */
+@media (max-width: 996px) {
+  .page-header {
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .page-header-title {
+    font-size: 2rem;
+  }
+
+  .content-section {
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+  }
+
+  .sidebar-depth {
+    margin: 1rem 0;
+    padding: 1rem;
+  }
+
+  .footer-depth {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-header {
+    margin-bottom: 1rem;
+    padding: 1rem;
+  }
+
+  .page-header-title {
+    font-size: 1.8rem;
+  }
+
+  .content-section {
+    margin: 1rem 0;
+    padding: 1rem;
+  }
+
+  .nav-depth {
+    margin: 0.75rem 0;
+    padding: 0.75rem;
+  }
+}
+
+/* Print styles - remove depth effects for better printing */
+@media print {
+  .main-container,
+  .page-header,
+  .content-section,
+  .sidebar-depth,
+  .nav-depth,
+  .footer-depth,
+  .modal-depth,
+  .button-depth,
+  .code-block-depth,
+  .table-depth,
+  .image-depth,
+  .video-depth,
+  .interactive-depth,
+  .card-depth-1,
+  .card-depth-2,
+  .card-depth-3 {
+    box-shadow: none !important;
+    border: 1px solid var(--ifm-color-emphasis-300);
+    background: var(--ifm-background-surface-color);
+  }
+
+  .page-header::before,
+  .content-section::before,
+  .sidebar-depth::before,
+  .footer-depth::before,
+  .nav-depth-item::before,
+  .button-depth::before,
+  .interactive-depth::before {
+    display: none !important;
+  }
+
+  .page-header:hover,
+  .content-section:hover,
+  .nav-depth:hover,
+  .image-depth:hover,
+  .video-depth:hover,
+  .interactive-depth:hover,
+  .card-depth-1:hover,
+  .card-depth-2:hover,
+  .card-depth-3:hover {
+    transform: none !important;
+  }
+}
